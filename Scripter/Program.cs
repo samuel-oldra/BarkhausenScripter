@@ -7,18 +7,20 @@ namespace Scripter
 {
     internal class Program
     {
-        #region Fields
+        #region Private Fields
 
         private static readonly List<double> ItensRms = new List<double>();
 
-        #endregion
+        #endregion Private Fields
 
-        #region Static private
+
+
+        #region Private Methods
 
         private static double CalcularMediaRms(List<double> lista)
         {
             double total = lista.Sum(item => Math.Pow(item, 2));
-            return Math.Sqrt(total/lista.Count);
+            return Math.Sqrt(total / lista.Count);
         }
 
         private static void GerarArquivoPico(string filePath, int margem = 2000)
@@ -119,7 +121,7 @@ namespace Scripter
 
                         if (count > 5000)
                         {
-                            media = total/5000;
+                            media = total / 5000;
                             break;
                         }
                         total += sec;
@@ -180,7 +182,7 @@ namespace Scripter
             if (files > 0)
                 using (var writer = new StreamWriter(args[1].Replace(".rmsn", ".rmsnm"), false))
                     for (int i = 0; i < count; i++)
-                        GravarArquivo(writer, itensRmsnmPri[i]/files, itensRmsnmSec[i]/files);
+                        GravarArquivo(writer, itensRmsnmPri[i] / files, itensRmsnmSec[i] / files);
         }
 
         private static void GravarArquivo(StreamWriter writer, double pri, double sec)
@@ -215,20 +217,24 @@ namespace Scripter
                     else if (args.Length == 4)
                         GerarArquivoRms(args[3], Convert.ToInt32(args[1]), Convert.ToInt32(args[2]));
                     break;
+
                 case "/RMSN":
                     if (args.Length == 2)
                         GerarArquivoRmsn(args[1]);
                     break;
+
                 case "/RMSNM":
                     if (args.Length >= 2)
                         GerarArquivoRmsnm(args);
                     break;
+
                 case "/PICO":
                     if (args.Length == 2)
                         GerarArquivoPico(args[1]);
                     if (args.Length == 3)
                         GerarArquivoPico(args[2], Convert.ToInt32(args[1]));
                     break;
+
                 default:
                     MostrarHelp();
                     //Console.ReadKey();
@@ -265,6 +271,6 @@ namespace Scripter
             Console.WriteLine();
         }
 
-        #endregion
+        #endregion Private Methods
     }
 }
