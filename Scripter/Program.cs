@@ -13,8 +13,6 @@ namespace Scripter
 
         #endregion Private Fields
 
-
-
         #region Private Methods
 
         private static double CalcularMediaRms(List<double> lista)
@@ -201,8 +199,6 @@ namespace Scripter
 
         private static void Main(string[] args)
         {
-            if (DateTime.Now > new DateTime(2013, 06, 01)) return;
-
             string script = string.Empty;
             if (args.Length >= 1)
                 script = args[0];
