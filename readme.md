@@ -1,2 +1,4 @@
-![alt text](https://bitbucket.org/samuel-oldra/barkhausen-scripter/raw/2e8b8460c36a9f82f9eeea74c6054749d01d9eb0/README_IMGS/1.png)
-![alt text](https://bitbucket.org/samuel-oldra/barkhausen-scripter/raw/2e8b8460c36a9f82f9eeea74c6054749d01d9eb0/README_IMGS/2.png)
+# Ajuda
+![alt text](https://raw.githubusercontent.com/samuel-oldra/Barkhausen-Scripter/main/README_IMGS/1.png)
+# Executar
+![alt text](https://raw.githubusercontent.com/samuel-oldra/Barkhausen-Scripter/main/README_IMGS/2.png)
